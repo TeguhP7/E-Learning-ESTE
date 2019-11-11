@@ -130,13 +130,13 @@
     </section>
 
     <div class="kotak">
-        <form action="" method="post">
+        <form action="<?= site_url('Materi/upload'); ?>" method="post">
             <h2>Upload Materi</h2><br />
             <table>
                 <td>Nama Kelas</td>
                 <td><input type="text" name="nama_materi" /></td>
             </table>
-            <textarea class="ckeditor" id="ckeditor"></textarea>
+            <textarea class="ckeditor" id="ckeditor" name="materi"></textarea>
             <br />
             <button class="tombol" type="submit">Simpan</button>
         </form>
