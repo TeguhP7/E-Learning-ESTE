@@ -129,16 +129,25 @@
         </div>
     </section>
 
-    <div class="kotak">
+
+    <div class="kotak formmateri container">
         <form action="<?= site_url('Materi/upload'); ?>" method="post">
             <h2>Upload Materi</h2><br />
-            <table>
-                <td>Nama Kelas</td>
-                <td><input type="text" name="nama_materi" /></td>
-            </table>
+            <div class="inner">
+                <div class="form-group">
+                    <div class="form-wrapper">
+                        <label for="">Nama Kelas</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-wrapper">
+                        <label for="">Id Kelas</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
             <textarea class="ckeditor" id="ckeditor" name="materi"></textarea>
             <br />
-            <button class="tombol" type="submit">Simpan</button>
+            <button class="button2" type="submit">Simpan</button>
         </form>
     </div>
 
