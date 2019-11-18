@@ -2095,7 +2095,7 @@ a{
 	padding: 0 20px;
 	border-radius: 20px;
 	font-family: "Muli-Bold";
-	background: none;
+	background-color: #ffffff;
 }
 
 .form-control:focus {

@@ -137,11 +137,11 @@
                 <div class="form-group">
                     <div class="form-wrapper">
                         <label for="">Nama Kelas</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="kelas">
                     </div>
                     <div class="form-wrapper">
                         <label for="">Id Kelas</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="kode_id">
                     </div>
                 </div>
             </div>
@@ -149,6 +149,10 @@
             <br />
             <button class="button2" type="submit">Simpan</button>
         </form>
+    </div>
+
+    <div class="container">
+        <?php base_url('Tampil_materi/get_data_by_id'); ?>
     </div>
 
     <div class="mid-video">
