@@ -86,6 +86,7 @@ class CourseIndex extends CI_Controller
         $data['errors'] = $this->error;
         $data['success'] = $this->success;
         //load the view along with data
+        cek_belum_login();
         $this->load->view('course_index', $data);
     }
 }

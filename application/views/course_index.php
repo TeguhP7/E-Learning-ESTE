@@ -84,6 +84,29 @@
         </div>
     </section>
 
+
+
+    <div class="kotak formmateri container">
+        <form action="<?= site_url('Materi/upload'); ?>" method="post">
+            <h2>Upload Materi</h2><br />
+            <div class="inner">
+                <div class="form-group">
+                    <div class="form-wrapper">
+                        <label for="">Nama Kelas</label>
+                        <input type="text" class="form-control" name="kelas">
+                    </div>
+                    <div class="form-wrapper">
+                        <label for="">Id Kelas</label>
+                        <input type="text" class="form-control" name="kode_id">
+                    </div>
+                </div>
+            </div>
+            <textarea class="ckeditor" id="ckeditor" name="materi"></textarea>
+            <br />
+            <button class="button2" type="submit">Simpan</button>
+        </form>
+    </div>
+
     <section id="containerrr">
         <div id="videobody" class="mid-video">
             <p>Select a video file to upload</p>
@@ -92,17 +115,6 @@
                 echo '<div class="success">';
                 echo '<p>' . $success . '</p>';
                 echo '</div>';
-
-                //traditional video play - less than HTML5
-                // echo '<object width="720" height="480">
-                // 		  <param name="src" value="' . $video_path . '/' . $video_name . '">
-                // 		  <param name="autoplay" value="false">
-                // 		  <param name="controller" value="true">
-                // 		  <param name="bgcolor" value="#333333">
-                // 		  <embed type="' . $video_type . '" src="' . $video_path . '/' . $video_name . '" autostart="false" loop="false" width="720" height="480" controller="true" bgcolor="#333333"></embed>
-                // 		  </object>';
-
-                //HTML5 video play
                 echo '<video width="720" height="480" controls>
                 		  <source src="videos/' . $video_name . '" type="' . $video_type . '">
                 		  Your browser does not support the video tag.
@@ -130,29 +142,8 @@
     </section>
 
 
-    <div class="kotak formmateri container">
-        <form action="<?= site_url('Materi/upload'); ?>" method="post">
-            <h2>Upload Materi</h2><br />
-            <div class="inner">
-                <div class="form-group">
-                    <div class="form-wrapper">
-                        <label for="">Nama Kelas</label>
-                        <input type="text" class="form-control" name="kelas">
-                    </div>
-                    <div class="form-wrapper">
-                        <label for="">Id Kelas</label>
-                        <input type="text" class="form-control" name="kode_id">
-                    </div>
-                </div>
-            </div>
-            <textarea class="ckeditor" id="ckeditor" name="materi"></textarea>
-            <br />
-            <button class="button2" type="submit">Simpan</button>
-        </form>
-    </div>
-
     <div class="container">
-        <?php base_url('Tampil_materi/get_data_by_id'); ?>
+        <p><?php base_url('Tampil_materi/get_data_by_id'); ?><p>
     </div>
 
     <div class="mid-video">
@@ -160,6 +151,7 @@
             <source src="videos/<?= $video_name; ?>" type="<?= $video_type; ?>">
         </video>
     </div>
+
 
     <!-- footer section -->
     <footer class="footer-section pb-0">
